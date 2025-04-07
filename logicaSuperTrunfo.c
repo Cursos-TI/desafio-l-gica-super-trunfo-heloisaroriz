@@ -2,15 +2,13 @@
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
 
 int main() {
     printf("Desafio Super Trunfo - Países\n");
     char estado1[50], estado2[50];
     char codigo1[50], codigo2[50];
     char nomecidade1[50], nomecidade2[50];
-    int populacao1, populacao2, pontosturisticos1, pontosturisticos2, atributo;
+    int populacao1, populacao2, pontosturisticos1, pontosturisticos2, atributo1,atributo2;
     float area1, area2, pib1, pib2;
     float densidade1, densidade2, pibcapita1, pibcapita2;
     
@@ -95,7 +93,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km² \n", densidade2);
     printf("PIB per Capita: %.2f reais \n", pibcapita2);
 
-// Comparação de Cartas:
+// Comparação de Cartas: Nivel intermediário
 
     printf("\nUtilizando a população das cartas para a comparação vamos descobrir quem venceu.\n\n");
     printf("Carta 1 - %s (%s): %d \n", estado1, codigo1, populacao1);
@@ -118,11 +116,11 @@ int main() {
     printf("4 - Número de Pontos Turísticos\n");
     printf("5 - Densidade Demográfica\n");
     printf("Escolha uma opção (1 a 5): ");
-    scanf("%d", &atributo);
+    scanf("%d", &atributo1);
 
     printf("\n---------- Resultado da Comparação ----------\n");
 
-    switch (atributo) {
+    switch (atributo1) {
         case 1:
             printf("Comparando População:\n");
             printf("%s: %d | %s: %d\n", nomecidade1, populacao1, nomecidade2, populacao2);
@@ -182,6 +180,53 @@ int main() {
             printf("Opção inválida!\n");
             break;
     }
-   
+//Nível mestre
+    printf("\nAgora você irá escolher 2 atributos para serem comparados e com isso determinar a carta vencedora. \n");
+    printf("Escolha o primeiro atributo de comparação\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade Demográfica\n");
+    printf("Digite o número correspondente: \n");
+    scanf("%d", &atributo1);
+
+    switch (atributo1)
+    {
+        case 1:
+        printf("VocÊ escolheu Populacão");
+        
+        break;
+        case 2:
+        /* code */
+        break;
+        case 3:
+        /* code */
+        break;
+        case 4:
+        /* code */
+        break;
+        case 5:
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
+
+
+
+    printf("\nEscolha o segundo atributo para comparação (diferente do primeiro):\n");
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos Turísticos\n");
+    printf("5 - Densidade Demográfica\n");
+    printf("Digite o número correspondente: \n");
+    scanf("%d", &atributo2);
+
+    if (atributo2 == atributo1) {
+        printf("\nVocê escolheu o mesmo atributo duas vezes. Reinicie e escolha atributos diferentes.\n");
+
     return 0;
 }
