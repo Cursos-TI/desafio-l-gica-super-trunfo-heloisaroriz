@@ -117,7 +117,6 @@ int main() {
     printf("3 - PIB\n");
     printf("4 - Pontos Turísticos\n");
     printf("5 - Densidade Demográfica\n");
-    printf("6 - PIB per Capita\n");
     printf("Digite o número correspondente ao atributo: ");
     scanf("%d", &atributo1);
 
@@ -183,19 +182,6 @@ int main() {
             else
                 printf("Resultado: Empate!\n");
             break;
-
-        case 6: // PIB per Capita
-            printf("Atributo: PIB per Capita\n");
-            printf("%s: %.2f reais\n", nomecidade1, pibcapita1);
-            printf("%s: %.2f reais\n", nomecidade2, pibcapita2);
-            if (pibcapita1 > pibcapita2)
-                printf("Resultado: %s venceu!\n", nomecidade1);
-            else if (pibcapita2 > pibcapita1)
-                printf("Resultado: %s venceu!\n", nomecidade2);
-            else
-                printf("Resultado: Empate!\n");
-            break;
-
         default:
             printf("Opção inválida. Por favor, execute o programa novamente e escolha uma opção válida.\n");
     }
@@ -218,12 +204,12 @@ int main() {
     }
 
     printf("\nEscolha o segundo atributo para comparação (diferente do primeiro):\n");
-    printf("1 - População\n");
-    printf("2 - Área\n");
-    printf("3 - PIB\n");
-    printf("4 - Pontos Turísticos\n");
-    printf("5 - Densidade Demográfica\n");
-    printf("Digite o número correspondente: \n");
+    if (atributo1 != 1) printf("1 - População\n");
+    if (atributo1 != 2) printf("2 - Área\n");
+    if (atributo1 != 3) printf("3 - PIB\n");
+    if (atributo1 != 4) printf("4 - Número de Pontos Turísticos\n");
+    if (atributo1 != 5) printf("5 - Densidade Demográfica\n");
+    printf("Digite o segundo atributo: ");
     scanf("%d", &atributo2);
 
      if (atributo2 == atributo1) {
